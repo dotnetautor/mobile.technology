@@ -1,0 +1,52 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="FeedReader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+  
+  <phone:PhoneApplicationPage.Resources>
+    <DataTemplate x:Key="FeedItemTemplate">
+      <StackPanel Margin="0,15" Width="400">
+        <Rectangle Fill="{StaticResource PhoneAccentBrush}" Height="5" Margin="12,0,12,5"/>
+        <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextTitle3Style}" HorizontalAlignment="Left" TextWrapping="Wrap" />
+        <TextBlock Text="{Binding Description}" Style="{StaticResource PhoneTextNormalStyle}" HorizontalAlignment="Left" TextWrapping="Wrap" />
+        <TextBlock Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding DatePublished}" Style="{StaticResource PhoneTextSubtleStyle}"/>
+      </StackPanel>
+    </DataTemplate>
+  </phone:PhoneApplicationPage.Resources>
+
+  <!--LayoutRoot is the root grid where all page content is placed-->
+  <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{d:DesignData /SampleData/FeedSampleSourceSampleData.xaml}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <!--TitlePanel contains the name of the application and page title-->
+    <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+      <TextBlock Text="Mobile Technology" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+      <TextBlock Text="FeedReader" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+    </StackPanel>
+
+    <!--ContentPanel - place additional content here-->
+    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Button x:Name="btnRefersh" Grid.Row="1" Content="Aktualisieren" Click="btnRefersh_Click" />
+      <phone:LongListSelector Grid.Row="0" x:Name="lstItems" Margin="0" ItemTemplate="{StaticResource FeedItemTemplate}" DataContext="{Binding}" ItemsSource="{Binding DataItems}" />
+    </Grid>
+
+  </Grid>
+
+</phone:PhoneApplicationPage>

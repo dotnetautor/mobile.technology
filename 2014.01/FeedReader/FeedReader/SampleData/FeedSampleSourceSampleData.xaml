@@ -1,0 +1,14 @@
+﻿<Model:FeedSampleSource xmlns:Model="clr-namespace:FeedReader.Model">
+	<Model:FeedSampleSource.DataItems>
+		<Model:FeedItem ArticleURL="Nunc mauris aliquam class" DatePublished="Accumsan bibendum duis adipiscing" Description="Aenean maecenas praesent phasellus nam" Title="Curabitur cras vestibulum"/>
+		<Model:FeedItem ArticleURL="Eleifend donec etiam" DatePublished="Parturient curae integer" Description="Convallis dignissim elementum" Title="Dictumst nullam consequat"/>
+		<Model:FeedItem ArticleURL="Adipiscing habitant est diam" DatePublished="Faucibus vestibulum arcu vestibulum dis" Description="Sed quisque facilisi" Title="Facilisis amet ante"/>
+		<Model:FeedItem ArticleURL="Leo fusce fermentum mus" DatePublished="Inceptos aliquam elit aliquet" Description="Parturient aptent eget" Title="Hac vivamus"/>
+		<Model:FeedItem ArticleURL="Non lobortis cursus" DatePublished="Nulla congue fringilla cubilia" Description="Blandit morbi commodo conubia nec" Title="Lorem interdum vestibulum vestibulum auctor"/>
+		<Model:FeedItem ArticleURL="Parturient feugiat per" DatePublished="Euismod proin" Description="Habitasse pharetra egestas erat eros" Title="Adipiscing enim nascetur dapibus"/>
+		<Model:FeedItem ArticleURL="Sed lacinia" DatePublished="Iaculis vestibulum" Description="Gravida placerat" Title="Augue hendrerit"/>
+		<Model:FeedItem ArticleURL="Lectus nisi" DatePublished="Vestibulum dolor sem dictum" Description="Natoque sagittis" Title="Nibh himenaeos pulvinar laoreet"/>
+		<Model:FeedItem ArticleURL="Posuere parturient vestibulum sed senectus" DatePublished="Litora imperdiet odio adipiscing nam" Description="Libero ligula vel" Title="Sit nisl nunc"/>
+		<Model:FeedItem ArticleURL="Ipsum orci vestibulum" DatePublished="Parturient vestibulum" Description="Luctus adipiscing" Title="Fames vestibulum potenti malesuada felis"/>
+	</Model:FeedSampleSource.DataItems>
+</Model:FeedSampleSource>
